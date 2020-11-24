@@ -1,0 +1,214 @@
+.dark-footer {
+    padding: 0;
+    background-color: $servicesBackgroundColor;
+
+    .dark-footer-padding {
+        padding: 100px 0;
+
+        @media (max-width: 992px) {
+            padding: 70px 0 0 0;
+        }
+
+        @media (max-width: 600px) {
+            padding: 40px 0 0 0;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+            .footer-box {
+                padding: 0 15px 0 45px;
+                width: 25%;
+                border-right: 1px solid $footerBorderBoxColor;
+
+                &:last-of-type {
+                    border: none;
+                }
+
+                @media (max-width:992px) {
+                    width: 50%;
+                    padding: 0 15px;
+                    margin: 0 0 30px 0;
+                    border: none;
+                }
+
+                @media (max-width:600px) {
+                    width: 100%;
+                    padding: 0 15px;
+                    margin: 0 0 30px 0;
+                    border: none;
+                    text-align: center;
+                }
+
+                .margin-20-bottom {
+                    margin: 0 0 20px 0;
+                    display: inline-block;
+                }
+
+                .text-small {
+                    color: $primaryTectColor;
+                    font-size: 12px;
+                    line-height: 1.8;
+                    margin: 0;
+                    width: 95%;
+
+                    &.margin-bottom {
+                        margin: 0 0 15px;
+                    }
+
+                    &.under-upper {
+                        text-decoration: underline;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .social-icon {
+                    display: inline-block;
+
+                    .social {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            display: inline-block;
+                            margin: 0 8px;
+
+                            &:first-of-type {
+                                margin-left: 0;
+                            }
+
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            a {
+                                text-align: center;
+                                font-size: 16px;
+                                line-height: 2;
+                                color: $secondaryColor;
+                                transition: .3s;
+
+                                &:hover {
+                                    color: $thirdColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .box-title {
+                    font-family: $headerFontFamily;
+                    color: $footerTitleBoxColor;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin: 0 0 10px;
+                }
+
+                .link-list {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0 0 25px;
+
+                    li {
+                        line-height: 1.5;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                a {
+                    color: $primaryTectColor;
+                    font-size: 12px;
+                    transition: .3s;
+
+                    &:hover {
+                        color: $thirdColor
+                    }
+
+                    &.under-upper:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .insta-list {
+                    list-style-type: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 15px -5px;
+                    padding: 0;
+
+                    li {
+                        width: calc(100%/3);
+                        padding: 5px;
+
+                        a {
+                            display: block;
+                            position: relative;
+                            text-align: center;
+
+                            &::before {
+                                content: "\f16d";
+                                font-family: 'Font Awesome 5 Brands';
+                                font-weight: 400;
+                                font-size: 12px;
+                                padding: 6px 0;
+                                color: $secondaryColor;
+                                background-color: $footerOverlayColor;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                opacity: 0;
+                                transition: .3s;
+                                z-index: 9;
+                            }
+
+                            &:hover::before {
+                                opacity: 0.8;
+                            }
+
+                            img {
+                                width: 100%;
+                                display: block;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .black-footer {
+        padding: 50px 0;
+        background-color: $footerBlackBackgroundColor;
+
+        .black-footer-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 -15px;
+
+            .black-footer-box {
+                padding: 0 15px;
+                color: $primaryTectColor;
+                font-size: 12px;
+                line-height: 1.5;
+                display: block;
+
+                a {
+                    color: $primaryTectColor;
+                    transition: .3s;
+
+                    &:hover {
+                        color: $thirdColor;
+                    }
+                }
+            }
+        }
+    }
+}

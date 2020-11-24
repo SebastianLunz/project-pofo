@@ -1,0 +1,56 @@
+.screen {
+    padding: 100px 0;
+
+    .container {
+        .screen-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .screen-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+
+                span {
+                    font-size: 12px;
+                    font-family: $headerFontFamily;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    color: $primaryTectColor;
+                    margin: 0 0 10px 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    @include fluid-type(20px, 32px);
+                    font-weight: 600;
+                    text-align: center;
+                    margin: 0 0 25px 0;
+                }
+
+                p {
+                    text-align: center;
+                    color: $primaryTectColor;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    margin: 0 0 25px 0;
+                }
+            }
+
+            .picture {
+                width: 100%;
+                padding: 0 15px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

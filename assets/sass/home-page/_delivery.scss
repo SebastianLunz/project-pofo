@@ -1,0 +1,102 @@
+.delivery {
+    padding: 0;
+
+    .delivery-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .delivery-box {
+            width: 50%;
+
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+
+            .delivery-picture {
+                background-image: url("../img/services-classic-03.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+
+                img {
+                    display: none;
+
+                    @media (max-width: 992px) {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    background-image: none;
+                    width: 100%;
+                }
+
+            }
+
+            .delivery-description {
+                background-color: $deliverBackgroundColor;
+                width: 100%;
+                padding: 80px;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                }
+
+
+                h3 {
+                    @include fluid-type(20px, 40px);
+                    font-weight: 600;
+                    margin: 0 0 50px 0;
+                    padding: 0;
+                }
+
+                .details {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -15px;
+
+                    .box {
+                        width: 50%;
+                        padding: 0 15px;
+                        margin: 0 0 30px 0;
+
+                        @media (max-width: 1200px) {
+                            width: 100%;
+                        }
+
+                        .box-padding-left {
+                            padding-left: 75px;
+                            position: relative;
+
+                            i {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                font-size: 35px;
+                                color: $primaryTectColor;
+                            }
+
+                            .data {
+
+                                h5 {
+                                    margin: 6px 0 10px 0;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+
+                                p {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    color: $primaryTectColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

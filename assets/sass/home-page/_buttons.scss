@@ -1,0 +1,50 @@
+.buttons {
+    text-transform: uppercase;
+    font-family: $headerFontFamily;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 25px 0 0 0;
+    transition: .3s;
+    white-space: nowrap;
+
+    .btn-slider {
+        color: $buttonsNegativeColor;
+        background-color: transparent;
+        border: 2px solid $buttonsNegativeColor;
+        padding: 10px 30px;
+        border-radius: 50px;
+
+        &:hover {
+            color: $buttonsMainColor;
+            background-color: $buttonsNegativeColor;
+        }
+
+        &.oposite {
+            color: $buttonsMainColor;
+            background-color: $buttonsNegativeColor;
+            margin: 0 15px 0 0;
+
+            &:hover {
+                color: $buttonsNegativeColor;
+                background-color: transparent;
+            }
+
+            @media (max-width: 700px) {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+
+    .btn-services {
+        color: $buttonsMainColor;
+        background-color: transparent;
+        border: 2px solid $buttonsMainColor;
+        padding: 10px 30px;
+        border-radius: 50px;
+
+        &:hover {
+            color: $buttonsNegativeColor;
+            background-color: $buttonsMainColor;
+        }
+    }
+}

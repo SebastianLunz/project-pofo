@@ -1,0 +1,57 @@
+.wow {
+    padding: 100px 0;
+
+    .container {
+        .wow-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+            .wow-box {
+                width: calc(100%/3);
+                padding: 0 15px;
+
+                @media (max-width: 992px) {
+                    width: 50%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                .title {
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                    padding: 5px 0;
+
+                    h3 {
+                        display: table-cell;
+                        vertical-align: middle;
+                        color: $wowNumberColor;
+                        font-weight: 600;
+                        font-size: 48px;
+                        @include fluid-type(28px, 48px)
+                    }
+
+                    span {
+                        display: table-cell;
+                        vertical-align: middle;
+                        font-family: $headerFontFamily;
+                        color: $secondaryTextColor;
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 0 0 0 20px;
+
+                    }
+                }
+            }
+
+            p {
+                color: $primaryTectColor;
+                font-size: 14px;
+                line-height: 1.5;
+                @include fluid-type(12px, 14px)
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.blogs {
+    padding: 100px 0;
+
+    .container {
+        .blogs-title {
+            width: 100%;
+
+            h5 {
+                font-size: 12px;
+                color: #939393;
+                margin: 0 0 15px 0;
+                font-weight: 300;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                @include fluid-type(20px, 32px);
+                text-align: center;
+                font-weight: 600;
+                margin: 0 auto 50px auto;
+                width: 50%;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .blogs-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+            .blogs-box {
+                width: calc(100%/3);
+                padding: 0 15px;
+                margin: 0 0 30px;
+
+                @media (max-width: 992px) {
+                    width: 50%;
+                }
+
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+
+                .blogs-photo {
+                    position: relative;
+
+                    a {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $primaryColor;
+                            transition: .3s;
+                            opacity: 0;
+                        }
+
+                        &:hover::before {
+                            opacity: .5;
+                        }
+
+                        &::after {
+                            font-family: 'Font Awesome 5 Free';
+                            content: "\f067";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 40px;
+                            font-weight: 900;
+                            color: $secondaryColor;
+                            opacity: 0;
+                            transition: .6s;
+                        }
+
+                        &:hover::after {
+                            opacity: 1;
+                        }
+
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .blogs-content {
+                    background-color: $blogsBackgroundColor;
+                    padding: 40px;
+
+                    a {
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        margin: 0 0 15px 0;
+                        font-family: $headerFontFamily;
+                        color: $secondaryTextColor;
+                        transition: .3s;
+
+                        &:hover {
+                            color: $thirdColor;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 1.5;
+                        margin: 0 0 25px 0;
+                        color: $primaryTectColor;
+                    }
+
+                    .separator {
+                        width: 100%;
+                        height: 1px;
+                        background-color: $blogsSeparatorColor;
+                        margin: 20px 0;
+                    }
+
+                    .author {
+                        padding: 3px 0;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        color: $primaryTectColor;
+
+                        a {
+                            text-transform: uppercase;
+                            font-size: 11px;
+                            color: $primaryTectColor;
+                            transition: .3s;
+                            margin: 0;
+
+                            &:hover {
+                                color: $thirdColor;
+                            }
+                        }
+                    }
+
+                    .title {
+                        text-align: center;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        font-family: $headerFontFamily;
+                        margin: 0 0 10px 0;
+                        font-weight: 600;
+                    }
+
+                    .genre {
+                        text-align: center;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        margin: 0;
+                        color: $primaryTectColor;
+                    }
+                }
+            }
+        }
+    }
+}

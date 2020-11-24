@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "global";
+@import "parts/navbar";
+
+// Plugins
+@import "plugins/owl/owl.carousel";
+@import "plugins/owl/owl.theme.default";
+@import "plugins/hamburgers/hamburgers";
+
+// Buttons
+@import "home-page/buttons";
+
+// Home-Page
+@import "home-page/slider";
+@import "home-page/wow";
+@import "home-page/delivery";
+@import "home-page/counter";
+@import "home-page/project";
+@import "home-page/features";
+@import "home-page/screen";
+@import "home-page/services";
+@import "home-page/testimonials";
+@import "home-page/blogs";
+@import "home-page/footer";
+@import "home-page/scroll-up";
